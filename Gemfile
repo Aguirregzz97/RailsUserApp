@@ -10,6 +10,7 @@ end
 gem 'rails', '~> 5.1.6'
 gem 'bootstrap-sass', '3.3.7'
 gem 'gravatar_image_tag'
+gem 'jquery-rails'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server
