@@ -18,11 +18,11 @@ module SessionsHelper
 
     def current_user?(user)
         user == current_user
-      end
+    end
     
     def correct_user?(user)
-    @user = User.find(params[:id])
-    redirect_to(root_url) unless current_user?(@user)
+        @user = User.find(params[:id])
+        redirect_to(root_url) unless current_user?(@user)
     end
 
     def logged_in?
