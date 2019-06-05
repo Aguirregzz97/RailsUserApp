@@ -27,5 +27,15 @@ RSpec.describe User, :type => :model do
             expect(user).to_not be_valid
         end
     end
+
+    example "should follow and unfollow a user" do
+        user1 = subject { build(:user) }
+        user2 = subject { build(:user) }
+        expect(user1.following?(user2)).to eql(false)
+        user1.follow(user2)
+        expect(user1.following?(user2)).to eql(true)
+        user1.unfollow(user2)
+        expect(user1.following?(user2)).to eql(false)
+    end
     
 end
